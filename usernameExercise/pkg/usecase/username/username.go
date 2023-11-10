@@ -3,7 +3,7 @@ package username
 import (
 	"context"
 
-	"github.com/snigle/dddExercise/pkg/domain"
+	"github.com/snigle/dddExercise/usernameExercise/pkg/domain"
 )
 
 type Username interface {

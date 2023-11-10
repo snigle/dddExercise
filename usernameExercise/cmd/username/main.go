@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/snigle/dddExercise/pkg/repository"
-	"github.com/snigle/dddExercise/pkg/repository/connectors"
-	"github.com/snigle/dddExercise/pkg/usecase/username"
+	"github.com/snigle/dddExercise/usernameExercise/pkg/repository"
+	"github.com/snigle/dddExercise/usernameExercise/pkg/repository/connectors"
+	"github.com/snigle/dddExercise/usernameExercise/pkg/usecase/username"
 )
 
 func main() {
