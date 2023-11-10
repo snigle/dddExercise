@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/snigle/dddExercise/pkg/domain"
-	"github.com/snigle/dddExercise/pkg/repository/connectors"
+	"github.com/snigle/dddExercise/usernameExercise/pkg/domain"
+	"github.com/snigle/dddExercise/usernameExercise/pkg/repository/connectors"
 )
 
 type twitter struct {
