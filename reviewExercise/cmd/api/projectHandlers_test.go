@@ -89,7 +89,7 @@ func (s *ProjectHandlerSuite) TestListBadParam() {
 	req, _ := http.NewRequest("GET", "/cloud/project/toto/instance", nil)
 	s.router.ServeHTTP(w, req)
 
-	s.Require().Equal(500, w.Code)
+	s.Require().Equal(400, w.Code)
 	expected, err := json.Marshal(errorOutput{"invalid projectId format"})
 	s.Require().NoError(err)
 	s.Require().Equal(string(expected), w.Body.String())
