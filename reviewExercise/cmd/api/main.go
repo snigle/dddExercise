@@ -7,13 +7,16 @@ import (
 	"github.com/gophercloud/gophercloud"
 	"github.com/gophercloud/gophercloud/openstack"
 	"github.com/h2non/gock"
+	"github.com/snigle/dddExercise/reviewExercise/bootstrap"
+	"github.com/snigle/dddExercise/reviewExercise/ui"
 )
 
-type errorOutput struct {
-	Message string `json:"string"`
-}
-
 func main() {
+	c, _ := bootstrap.Constructor()
+
+	cloudProviderConf := c.CloudProviderConf
+	cloudProvider:= 
+	// On crére l'API service, en passant comme argument un client d'open stack qui est instanticé avant
 	opts := gophercloud.AuthOptions{
 		IdentityEndpoint: "https://openstack.example.com:5000/v3/",
 		Username:         "username",
@@ -33,5 +36,5 @@ func main() {
 }
 
 func registerRoutes(router *gin.Engine, provider gophercloud.ProviderClient) {
-	router.GET("/cloud/project/:projectId/instance", listInstanceHandler(provider))
+	router.GET("/cloud/project/:projectId/instance", ui.ListInstanceHandler(provider))
 }
